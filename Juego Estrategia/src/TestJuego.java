@@ -21,7 +21,7 @@ public class TestJuego {
 		System.out.println(lancerazo);
 		
 		
-		
+		//comentario para prueba de git
 		arquerito.atacar(arquerazo);
 		System.out.println();
 		arquerito.atacar(arquerazo);
