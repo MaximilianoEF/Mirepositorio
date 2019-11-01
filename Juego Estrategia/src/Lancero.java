@@ -28,8 +28,47 @@ public class Lancero extends Personaje{
 	@Override
 	public boolean puedeAtacar(Personaje a) {
 		
-		return (a.estaVivo()&&this.estaVivo() && this.distancia(a)>=Lancero.distanciaMinimaAtaque && this.distancia(a)<= Lancero.distanciaMaximaAtaque);
-			 
+		boolean puedeAtacar=true;
+		
+		try {
+			if (a.estaVivo()==false) {
+				throw new MiException(001);
+				
+			}
+		
+			if (this.estaVivo()==false) {
+				throw new MiException (005);
+				
+			}
+			if (this.distancia(a)<Lancero.distanciaMinimaAtaque 
+					&& this.distancia(a)> Lancero.distanciaMaximaAtaque) {
+				throw new MiException (002);
+				
+			}
+			
+		}
+		catch (MiException fail) {
+			System.out.println(fail.getMensaje());
+			puedeAtacar=false;
+		}
+			return puedeAtacar; 
+		
+	}
+	
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		return true;
 	}
 	
 	@Override

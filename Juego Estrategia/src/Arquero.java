@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public class Arquero extends Personaje{
 	
@@ -33,14 +34,55 @@ public class Arquero extends Personaje{
 	@Override
 	public boolean puedeAtacar(Personaje a) {
 		
-		return (this.flechas > 0 && this.estaVivo() && this.distancia(a)>=Arquero.distanciaMinimaAtaque && this.distancia(a)<= Arquero.distanciaMaximaAtaque);
-			 
+		boolean puedeAtacar=true;
+		
+		try {
+			if (a.estaVivo()==false) {
+				throw new MiException(001);
+				
+			}
+			if (this.flechas<=0) {
+				throw new MiException (007);
+				
+			}
+			if (this.estaVivo()==false) {
+				throw new MiException (005);
+				
+			}
+			if (this.distancia(a)<Arquero.distanciaMinimaAtaque && this.distancia(a)> Arquero.distanciaMaximaAtaque) {
+				throw new MiException (002);
+				
+			}
+			
+		}
+		catch (MiException fail) {
+			System.out.println(fail.getMensaje());
+			puedeAtacar=false;
+		}
+			return puedeAtacar; 
 	}
 	
 	public void cargarFlechas() {
 		this.flechas+=6;
 	}
 	
+	@Override
+	public int hashCode() {
+		return Objects.hash(flechas);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Arquero other = (Arquero) obj;
+		return flechas == other.flechas;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString().concat("TIPO ARQUERO").concat("\t").concat("Flechas ").concat(String.valueOf(this.flechas));

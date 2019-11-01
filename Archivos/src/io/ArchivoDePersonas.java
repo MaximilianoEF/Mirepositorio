@@ -12,11 +12,13 @@ public class ArchivoDePersonas {
 	public static LinkedList<Persona> getPersonas(String miLista) throws FileNotFoundException{
 		
 		LinkedList<Persona> lista = new LinkedList<Persona>();
+		//Creamos un archivo y utilizamos el metodo scanner para leerlo
 		File f = new File(miLista);
 		Scanner sc = new Scanner(f);
 		sc.useLocale(Locale.ENGLISH);
 		
 		while(sc.hasNext()) {
+			//En la lista agregar, siguiente entero de la lectura del archivo, siguiente string de la lectura del archivo...
 			lista.add(new Persona(sc.nextInt(), sc.next(), sc.nextInt()));
 		}
 		
@@ -26,15 +28,22 @@ public class ArchivoDePersonas {
 	
 	public static  LinkedList<Persona> getPersonaOrdenadoPorDni(LinkedList<Persona> list) throws IOException {
 		
-		LinkedList <Persona> ordenadasPorDni=new LinkedList <Persona>();
-		Collections.sort(list);
-		for(Persona p : list) {
-		ordenadasPorDni.add(p);}
 		
+		LinkedList <Persona> ordenadasPorDni=new LinkedList <Persona>();
+		for(Persona p : list) {
+			ordenadasPorDni.add(p);}
+		Collections.sort(ordenadasPorDni);
+		
+		//Metodo de escritura en un archivo
 		PrintWriter salida=new PrintWriter(new FileWriter("personasOrdenadasPorDni.txt"));
-		for(Persona p : ordenadasPorDni) {
-			salida.println(p);
-		}
+		Iterator<Persona> it1 = list.iterator();
+
+        while (it1.hasNext()){
+
+            Persona tmp = it1.next();
+            salida.println(tmp);
+
+        }
 		
 		salida.close();
 		
@@ -42,27 +51,38 @@ public class ArchivoDePersonas {
 		
 	}
 	
-public static  LinkedList<Persona> getPersonaOrdenadoPorEdad(LinkedList<Persona> list) throws IOException {
+	public static void listarPersona(LinkedList<Persona> lista, String nombreDeSalida) throws IOException{
 		
-		LinkedList <Persona> ordenadasPorEdad=new LinkedList <Persona>();
-		Collections.sort(list, new Comparator<Persona>(){
+		PrintWriter salida=new PrintWriter(new FileWriter(nombreDeSalida));
+		Iterator<Persona> it1 = lista.iterator();
 
-		    @Override
-		    public int compare(Persona p1, Persona p2) {
-		        return p1.getEdad().compareTo(p2.getEdad());
-		    }
-		});
-		for(Persona p : list) {
-		ordenadasPorEdad.add(p);}
+        while (it1.hasNext()){
+
+            Persona tmp = it1.next();
+            salida.println(tmp.toString());
+
+        }
 		
-		PrintWriter salida=new PrintWriter(new FileWriter("personasOrdenadasPorEdad.txt"));
-		for(Persona p : ordenadasPorEdad) {
+		salida.close();
+		
+	}
+	
+	public static LinkedList<Persona> getPersonasMayoresAedad(LinkedList<Persona> list, int edad) throws IOException {
+		
+		LinkedList <Persona> mayoresAedad=new LinkedList <Persona>();
+
+		for(Persona p : list) {
+			if(p.getEdad()>edad) {
+		mayoresAedad.add(p);}}
+		
+		PrintWriter salida=new PrintWriter(new FileWriter("mayoresAedad.out"));
+		for(Persona p : mayoresAedad) {
 			salida.println(p);
 		}
 		
 		salida.close();
 		
-		return ordenadasPorEdad;
+		return mayoresAedad;
 		
 	}
 
