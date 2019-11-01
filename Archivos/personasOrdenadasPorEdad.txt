@@ -1,0 +1,110 @@
+edad= 20 dni= 34098790 apellido= Baravalle
+
+edad= 21 dni= 32790866 apellido= Moreno
+
+edad= 21 dni= 33786091 apellido= Vera
+
+edad= 21 dni= 36900375 apellido= Ocampo
+
+edad= 22 dni= 29477936 apellido= Francischini
+
+edad= 23 dni= 32419830 apellido= Bellana
+
+edad= 23 dni= 36714588 apellido= Perazzo
+
+edad= 23 dni= 38010118 apellido= TurkoSoto
+
+edad= 24 dni= 37649546 apellido= Ledesma
+
+edad= 24 dni= 38380227 apellido= Menichetti
+
+edad= 25 dni= 30513994 apellido= Caruso
+
+edad= 25 dni= 32757425 apellido= PerezAledda
+
+edad= 25 dni= 34375738 apellido= Occhi
+
+edad= 25 dni= 35951783 apellido= Santelli
+
+edad= 25 dni= 35974947 apellido= Aranda
+
+edad= 25 dni= 37542331 apellido= Albarracín
+
+edad= 26 dni= 18861210 apellido= Villca
+
+edad= 26 dni= 26942727 apellido= Esposito
+
+edad= 26 dni= 32616493 apellido= Alonso
+
+edad= 26 dni= 32631539 apellido= Gonzalez
+
+edad= 26 dni= 41450508 apellido= Chicchi
+
+edad= 27 dni= 29130380 apellido= Correa
+
+edad= 27 dni= 35532465 apellido= PinEtchave
+
+edad= 27 dni= 36178904 apellido= Gomez
+
+edad= 27 dni= 37273740 apellido= Santise
+
+edad= 28 dni= 33907663 apellido= Gualco
+
+edad= 29 dni= 32236740 apellido= Ubillos
+
+edad= 29 dni= 38028213 apellido= Crosta
+
+edad= 30 dni= 28408106 apellido= Avendaño
+
+edad= 30 dni= 36166857 apellido= Cela
+
+edad= 30 dni= 38031617 apellido= Accerboni
+
+edad= 30 dni= 38142213 apellido= Gobbi
+
+edad= 32 dni= 33116287 apellido= Guido
+
+edad= 32 dni= 33423119 apellido= Coronado
+
+edad= 32 dni= 36087949 apellido= Bravo
+
+edad= 32 dni= 37754713 apellido= Iseñ
+
+edad= 34 dni= 34412028 apellido= Ayvar
+
+edad= 34 dni= 37753908 apellido= Rodeiro
+
+edad= 34 dni= 37864636 apellido= Amato
+
+edad= 35 dni= 13554552 apellido= Jovanovich
+
+edad= 36 dni= 31604852 apellido= Grau
+
+edad= 36 dni= 37113832 apellido= Toloza
+
+edad= 36 dni= 37792163 apellido= Martin
+
+edad= 37 dni= 32605380 apellido= Elizagoyen
+
+edad= 37 dni= 35204681 apellido= Benitez
+
+edad= 37 dni= 35368160 apellido= Gonzalez
+
+edad= 37 dni= 38200327 apellido= Benini
+
+edad= 38 dni= 26816082 apellido= Veljacic
+
+edad= 38 dni= 30603450 apellido= Vinci
+
+edad= 38 dni= 31464233 apellido= Frigerio
+
+edad= 38 dni= 32980931 apellido= Castillo
+
+edad= 39 dni= 32760802 apellido= Iglesias
+
+edad= 39 dni= 37864860 apellido= Ali
+
+edad= 40 dni= 27302142 apellido= Canteros
+
+edad= 40 dni= 37605721 apellido= Allegretti
+

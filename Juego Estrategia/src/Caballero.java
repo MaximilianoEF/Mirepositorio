@@ -24,7 +24,7 @@ public class Caballero extends Personaje{
 	}
 	
 	public boolean estadoLoco(Caballo caballo) {
-		return (caballo.getFuria()>3);
+		return (caballo.getFuria()>=3);
 	}
 	
 	@Override
